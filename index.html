@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator</title>
+    <link href="/style.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    <div class="container">
+        <div class="cal bg-black">
+            <div class="screen-box bg-light" id="screen-box">
+                <div style="margin-top: .9em !important; margin-left: 10em;">
+                  <input id="screen" type="text" dir="rtl" readonly  style="border: 0;">
+                  <input id="screen2" type="text" dir="rtl" value="0" readonly style="border: 0;">
+                 </div>
+                
+                
+            </div>
+            <div class="up-buttons" > 
+                <button type="button" class="btn lp" >mc</button>
+                <button type="button" class="btn lp">m+</button>
+                <button type="button" class="btn lp" onclick="allclear()" id="clear-button">AC</button>
+                <button type="button" class="btn lp" onclick="clearInput()" id="clearScreen">C</button>
+                <button type="button" class="btn lg">mc</button>
+                <button type="button" class="btn lg">m+</button>
+                <button type="button" class="btn lg">m-</button>
+                <button type="button" class="btn lg">mr</button>
+            </div>
+            <div class="down-buttons">
+                <input type="button" value="7" class="btn nb" onclick="addToInput('7')">
+                <input type="button" value="8" class="btn nb" onclick="addToInput('8')">
+                <input type="button" value="9" class="btn nb" onclick="addToInput('9')">
+                <input type="button" value="/" class="btn ac"  onclick="addToInput('/')">
+                <input type="button" value="R" class="btn ac">
+                <input type="button" value="4" class="btn nb" onclick="addToInput('4')">
+                <input type="button" value="5" class="btn nb" onclick="addToInput('5')">
+                <input type="button" value="6" class="btn nb" onclick="addToInput('6')">
+                <input type="button" value="x" class="btn ac" onclick="addToInput('*')">
+                <input type="button" value="^" class="btn ac" onclick="addToInput('**')">
+                <input type="button" value="1" class="btn nb" onclick="addToInput('1')">
+                <input type="button" value="2" class="btn nb" onclick="addToInput('2')">
+                <input type="button" value="3" class="btn nb" onclick="addToInput('3')">
+                <input type="button" value="-" class="btn ac" onclick="addToInput('-')">
+                <input type="button" value="√" class="btn ac" onclick="calculateSqrt()">
+                <input type="button" value="0" class="btn nb" onclick="addToInput('0')">
+                <input type="button" value="." class="btn ac" onclick="addDecimal()">
+                <input type="button" value="+-" class="btn ac" onclick="toggleSign()">
+                <input type="button" value="+" class="btn ac" onclick="addToInput('+')">
+                <input type="button" value="=" class="btn equal lr" onclick="calculate()" >
+            </div>
+        </div>
+    </div>
+
+   <script src="/script.js"></script>
+
+  </body>
+</html>
